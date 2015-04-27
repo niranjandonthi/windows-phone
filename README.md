@@ -1,5 +1,5 @@
 # windows-phone
-Project Coordinator: Noranjan
+Project Coordinator: Niranjan
 
 Environment: Windows Phone 8
 

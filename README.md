@@ -5,4 +5,4 @@ Environment: Windows Phone 8
 
 Device Type: Smartphone
 
-Device: Lumia 830?
+Device: Lumia 830

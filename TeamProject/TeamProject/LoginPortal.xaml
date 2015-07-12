@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="TeamProject.LoginPortal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TeamProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="35,26,0,0" TextWrapping="Wrap" Text="Sign In" VerticalAlignment="Top" FontSize="28"/>
+        <TextBlock HorizontalAlignment="Left" Margin="40,122,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="un_txtbx" HorizontalAlignment="Left" Margin="165,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Height="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="40,189,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="18"/>
+        <Button x:Name="btn_login" Content="Anmelden" HorizontalAlignment="Left" Margin="165,256,0,0" VerticalAlignment="Top" Click="btn_login_Click"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock x:Name="msg_valid" HorizontalAlignment="Left" Height="20" Margin="40,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90" RequestedTheme="Dark" Foreground="#FFF70B0B"/>
+        <PasswordBox x:Name="pw_txtbx" HorizontalAlignment="Left" Margin="165,183,0,0" VerticalAlignment="Top" Height="22" Width="179"/>
+    </Grid>
+</Page>

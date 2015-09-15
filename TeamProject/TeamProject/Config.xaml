@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="TeamProject.Config"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TeamProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="35,26,0,0" TextWrapping="Wrap" Text="Configuration" VerticalAlignment="Top" FontSize="28"/>
+        <ComboBox x:Name="cmb_ar" HorizontalAlignment="Left" Margin="131,77,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto">
+            <ComboBoxItem Content="ON"/>
+            <ComboBoxItem Content="OFF"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="22,95,0,0" TextWrapping="Wrap" Text="Auto-Rotate" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="22,150,0,0" TextWrapping="Wrap" Text="Orientation" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cmb_or" HorizontalAlignment="Left" Margin="131,132,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto">
+            <ComboBoxItem Content="Potrait"/>
+            <ComboBoxItem Content="Landscape"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="22,200,0,0" TextWrapping="Wrap" Text="Inputs" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cmb_input" HorizontalAlignment="Left" Margin="131,188,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto">
+            <ComboBoxItem Content="Thumb"/>
+            <ComboBoxItem Content="Single Finger"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="22,256,0,0" TextWrapping="Wrap" Text="Postures" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cmb_post" HorizontalAlignment="Left" Margin="131,244,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto">
+            <ComboBoxItem Content="Tilt to Right"/>
+            <ComboBoxItem Content="Tilt to Left"/>
+            <ComboBoxItem Content="Tilt to Front"/>
+            <ComboBoxItem Content="Tilt to Back"/>
+            <ComboBoxItem Content="No Tilt"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="22,359,0,0" TextWrapping="Wrap" Text="Others" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cmb_other" HorizontalAlignment="Left" Margin="131,344,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto">
+            <ComboBoxItem Content="None"/>
+            <ComboBoxItem Content="External Stick"/>
+            <ComboBoxItem Content="Earphones"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="22,311,0,0" TextWrapping="Wrap" Text="Add-ons" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cmb_add" HorizontalAlignment="Left" Margin="131,293,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto">
+            <ComboBoxItem Content="Sitting"/>
+            <ComboBoxItem Content="Sleeping"/>
+            <ComboBoxItem Content="Walking"/>
+            <ComboBoxItem Content="Running"/>
+        </ComboBox>
+        <Button x:Name="btn_log" Content="Log" HorizontalAlignment="Left" Margin="22,413,0,0" VerticalAlignment="Top" Click="btn_log_Click"/>
+        <TextBlock x:Name="test" HorizontalAlignment="Left" Margin="22,541,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="Auto" Width="Auto"/>
+    </Grid>
+</Page>

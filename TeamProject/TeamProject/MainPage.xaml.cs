@@ -12,6 +12,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Threading.Tasks;
+using Windows.Storage;
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
@@ -47,7 +50,7 @@ namespace TeamProject
 
         private void Btn_start_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(LoginPortal));
+            this.Frame.Navigate(typeof(Login));         
         }
     }
 }

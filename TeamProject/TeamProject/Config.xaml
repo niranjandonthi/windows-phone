@@ -8,45 +8,66 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Margin="0,0.333,0,-0.333">
         <TextBlock HorizontalAlignment="Left" Margin="35,26,0,0" TextWrapping="Wrap" Text="Configuration" VerticalAlignment="Top" FontSize="28"/>
-        <ComboBox x:Name="cmb_ar" HorizontalAlignment="Left" Margin="131,77,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto">
+        <ComboBox x:Name="cmb_ar" HorizontalAlignment="Left" Margin="131,77,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto" PlaceholderText="">
             <ComboBoxItem Content="ON"/>
             <ComboBoxItem Content="OFF"/>
         </ComboBox>
+        <ComboBox x:Name="cmb_layout" HorizontalAlignment="Left" Margin="131,132,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto" PlaceholderText="">
+            <ComboBoxItem Content="Keyboard"/>
+            <ComboBoxItem Content="Icon-Grid"/>
+            <ComboBoxItem Content="PIN"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="22,205,0,0" TextWrapping="Wrap" Text="Variation" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cmb_Variation" HorizontalAlignment="Left" Margin="131,188,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto" PlaceholderText="">
+            <ComboBoxItem Content="Standard"/>
+            <ComboBoxItem Content="Split"/>
+            <ComboBoxItem Content="Additional Buttons"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="22,150,0,0" TextWrapping="Wrap" Text="Layout" VerticalAlignment="Top" FontSize="18"/>
         <TextBlock HorizontalAlignment="Left" Margin="22,95,0,0" TextWrapping="Wrap" Text="Auto-Rotate" VerticalAlignment="Top" FontSize="18"/>
-        <TextBlock HorizontalAlignment="Left" Margin="22,150,0,0" TextWrapping="Wrap" Text="Orientation" VerticalAlignment="Top" FontSize="18"/>
-        <ComboBox x:Name="cmb_or" HorizontalAlignment="Left" Margin="131,132,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto">
+        <TextBlock HorizontalAlignment="Left" Margin="23,261,0,0" TextWrapping="Wrap" Text="Orientation" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cmb_or" HorizontalAlignment="Left" Margin="131,242,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto" PlaceholderText="">
             <ComboBoxItem Content="Potrait"/>
-            <ComboBoxItem Content="Landscape"/>
+            <ComboBoxItem Content="L - Landscape"/>
+            <ComboBoxItem Content="R - Landscape"/>
         </ComboBox>
-        <TextBlock HorizontalAlignment="Left" Margin="22,200,0,0" TextWrapping="Wrap" Text="Inputs" VerticalAlignment="Top" FontSize="18"/>
-        <ComboBox x:Name="cmb_input" HorizontalAlignment="Left" Margin="131,188,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto">
+        <TextBlock HorizontalAlignment="Left" Margin="22,310,0,0" TextWrapping="Wrap" Text="Inputs" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cmb_input" HorizontalAlignment="Left" Margin="131,298,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto" PlaceholderText="">
             <ComboBoxItem Content="Thumb"/>
-            <ComboBoxItem Content="Single Finger"/>
+            <ComboBoxItem Content="One Finger"/>
+            <ComboBoxItem Content="Two Finger"/>
         </ComboBox>
-        <TextBlock HorizontalAlignment="Left" Margin="22,256,0,0" TextWrapping="Wrap" Text="Postures" VerticalAlignment="Top" FontSize="18"/>
-        <ComboBox x:Name="cmb_post" HorizontalAlignment="Left" Margin="131,244,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto">
+        <TextBlock HorizontalAlignment="Left" Margin="22,366,0,0" TextWrapping="Wrap" Text="Postures" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cmb_post" HorizontalAlignment="Left" Margin="131,354,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto" PlaceholderText="">
+            <ComboBoxItem Content="Two hands front of chest"/>
+            <ComboBoxItem Content="One hand front of chest"/>
             <ComboBoxItem Content="Tilt to Right"/>
             <ComboBoxItem Content="Tilt to Left"/>
             <ComboBoxItem Content="Tilt to Front"/>
             <ComboBoxItem Content="Tilt to Back"/>
             <ComboBoxItem Content="No Tilt"/>
         </ComboBox>
-        <TextBlock HorizontalAlignment="Left" Margin="22,359,0,0" TextWrapping="Wrap" Text="Others" VerticalAlignment="Top" FontSize="18"/>
-        <ComboBox x:Name="cmb_other" HorizontalAlignment="Left" Margin="131,344,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto">
+        <TextBlock HorizontalAlignment="Left" Margin="22,469,0,0" TextWrapping="Wrap" Text="Others" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cmb_other" HorizontalAlignment="Left" Margin="131,454,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto" PlaceholderText="">
             <ComboBoxItem Content="None"/>
+            <ComboBoxItem Content="Bumper"/>
+            <ComboBoxItem Content="Protectors"/>
             <ComboBoxItem Content="External Stick"/>
             <ComboBoxItem Content="Earphones"/>
         </ComboBox>
-        <TextBlock HorizontalAlignment="Left" Margin="22,311,0,0" TextWrapping="Wrap" Text="Add-ons" VerticalAlignment="Top" FontSize="18"/>
-        <ComboBox x:Name="cmb_add" HorizontalAlignment="Left" Margin="131,293,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto">
+        <TextBlock HorizontalAlignment="Left" Margin="22,421,0,0" TextWrapping="Wrap" Text="Add-ons" VerticalAlignment="Top" FontSize="18"/>
+        <ComboBox x:Name="cmb_add" HorizontalAlignment="Left" Margin="131,403,0,0" VerticalAlignment="Top" Width="Auto" Height="Auto" PlaceholderText="">
             <ComboBoxItem Content="Sitting"/>
             <ComboBoxItem Content="Sleeping"/>
             <ComboBoxItem Content="Walking"/>
             <ComboBoxItem Content="Running"/>
         </ComboBox>
-        <Button x:Name="btn_log" Content="Log" HorizontalAlignment="Left" Margin="22,413,0,0" VerticalAlignment="Top" Click="btn_log_Click"/>
-        <TextBlock x:Name="test" HorizontalAlignment="Left" Margin="22,541,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="Auto" Width="Auto"/>
+        <Button x:Name="btn_log" Content="Set" HorizontalAlignment="Left" Margin="22,523,0,0" VerticalAlignment="Top" Click="btn_log_Click"/>
+        <TextBlock x:Name="test" HorizontalAlignment="Left" Margin="23,603,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="Auto" Width="Auto"/>
+        <Button x:Name="btnContinue" Content="Continue" HorizontalAlignment="Left" Margin="228,522,0,0" VerticalAlignment="Top" Click="btnContinue_Click" />
+        <TextBlock x:Name="userInfo" HorizontalAlignment="Left" Margin="277,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="Auto" Width="Auto" RenderTransformOrigin="0.481,-29.295" FontSize="17"/>
+
     </Grid>
 </Page>

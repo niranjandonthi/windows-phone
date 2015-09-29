@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using Windows.Storage;
 using Windows.Storage.Streams;
 using System.Text;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -34,31 +35,26 @@ namespace TeamProject
         /// <summary>
         /// Invoked when this page is about to be displayed in a Frame.
         /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.
+        /// <param name="ex">Event data that describes how this page was reached.
         /// This parameter is typically used to configure the page.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs ex)
         {
         }
-        public class PassedData
-        {
-            public string userdata { get; set; }
-            
-        }
-
+      
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
             ///Validation of the credentials.
+            string selectedUser=((ComboBoxItem)cmb_user.SelectedItem).Content.ToString();
             if (pw_txtbx.Password.Equals(""))
             {
                msg_valid.Text = "Please enter the Password";
             }
-            else if (((ComboBoxItem)cmb_user.SelectedItem).Content.ToString() == "User 1" || ((ComboBoxItem)cmb_user.SelectedItem).Content.ToString() == "User 2" || ((ComboBoxItem)cmb_user.SelectedItem).Content.ToString() == "User 3")
+            else if (selectedUser == "User 1" || selectedUser == "User 2" || selectedUser == "User 3")
             {
                 if (pw_txtbx.Password.Equals("niranjan"))
                 {
-                    Frame.Navigate(typeof(Config), new PassedData { userdata= ((ComboBoxItem)cmb_user.SelectedItem).Content.ToString() });
-                   ///NavigationService.Navigate(new Uri("/Config.xaml?msg=" + ((ComboBoxItem)cmb_user.SelectedItem).Content.ToString(), UriKind.Relative));
-
+                   /// Frame.Navigate(typeof(Config), new PassedData { userdata= ((ComboBoxItem)cmb_user.SelectedItem).Content.ToString()});
+                    this.Frame.Navigate(typeof(Config),selectedUser);
                 }
 
                 else
@@ -66,6 +62,11 @@ namespace TeamProject
                     msg_valid.Text = "Incorrect Credentials";
                 }
             }
+
+            //Checking whether value is being taken or not.
+            txt_test.Text = selectedUser;
+            
+           
             
         }
         }

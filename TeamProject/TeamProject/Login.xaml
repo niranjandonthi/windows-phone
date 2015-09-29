@@ -21,5 +21,7 @@
             <ComboBoxItem Content="User 3" />
         </ComboBox>
         <Button x:Name="btn_login" Content="Anmelden" HorizontalAlignment="Left" Margin="165,282,0,0" VerticalAlignment="Top" Click="btn_login_Click"/>
+        <TextBlock x:Name="txt_test" HorizontalAlignment="Left" Margin="146,436,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
     </Grid>
 </Page>

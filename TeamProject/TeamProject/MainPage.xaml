@@ -8,8 +8,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Button x:Name="Btn_start" Content="Start Logging" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="146,238,0,0" Click="Btn_start_Click"/>
+    <Grid Margin="0,0.333,0,-33.333">
+        <StackPanel HorizontalAlignment="Left" Height="100" Margin="60,188,0,0" VerticalAlignment="Top" Width="100"/>
+        <StackPanel HorizontalAlignment="Left" Height="275" Margin="10,188,0,0" VerticalAlignment="Top" Width="390">
+            <Button Content="Home" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Blue"/>
+            <Button x:Name="Btn_start" Content="Start Logging" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Btn_start_Click" Height="102" Width="390" Background="Green"/>
+            <Button Content="About Us" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click"/>
+            <Button Content="Exit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click" Background="Red"/>
+        </StackPanel>
 
     </Grid>
 </Page>

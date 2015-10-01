@@ -32,6 +32,7 @@ namespace TeamProject
         public GyroAcceloData()
         {
             this.InitializeComponent();
+            Gyrometer gyro;
            //// if (!GyrometerReading.IsSupported)
             ///{
  
@@ -52,5 +53,7 @@ namespace TeamProject
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
+
+       
     }
 }

@@ -9,11 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" Margin="0,-10,0,10">
             
             <StackPanel Orientation="Vertical">
-                <TextBlock Height="30" Name="statusTextBlock" Text="status: " VerticalAlignment="Top"  />
-                <TextBlock Height="30" Name="timeBetweenUpdatesTextBlock" Text="time between updates: " VerticalAlignment="Top"/>
+                <TextBlock Height="30" Name="Topic1" Text="Gyrosensor: " VerticalAlignment="Top"  />
             </StackPanel>
             <TextBlock Text="current rotational velocity (rads/sec)"></TextBlock>
             <Grid>
@@ -21,25 +20,26 @@
                 <TextBlock Height="30" HorizontalAlignment="Center" x:Name="currentYTextBlock" Text="Y: 1.0" VerticalAlignment="Top" Foreground="Green" FontSize="28" FontWeight="Bold"/>
                 <TextBlock Height="30" HorizontalAlignment="Right"  x:Name="currentZTextBlock" Text="Z: 1.0" VerticalAlignment="Top"  Foreground="Blue" FontSize="28" FontWeight="Bold"/>
             </Grid>
-            <Grid Height="94">
+            <Grid Height="53">
                 <Line x:Name="currentXLine" X1="240" Y1="40" X2="240" Y2="40" Stroke="Red" StrokeThickness="14"></Line>
                 <Line x:Name="currentYLine" X1="240" Y1="70" X2="240" Y2="70" Stroke="Green" StrokeThickness="14"></Line>
                 <Line x:Name="currentZLine" X1="240" Y1="100" X2="240" Y2="100" Stroke="Blue" StrokeThickness="14"></Line>
             </Grid>
-            <TextBlock Text="cumulative rotation (degrees)"></TextBlock>
+            <TextBlock Text="Cumulative Rotation (Degrees)"></TextBlock>
             <Grid>
                 <TextBlock Height="30" HorizontalAlignment="Left" Name="cumulativeXTextBlock" Text="X: 1.0" VerticalAlignment="Top" Foreground="Red" FontSize="28" FontWeight="Bold"/>
                 <TextBlock Height="30" HorizontalAlignment="Center" Name="cumulativeYTextBlock" Text="Y: 1.0" VerticalAlignment="Top" Foreground="Green" FontSize="28" FontWeight="Bold"/>
                 <TextBlock Height="30" HorizontalAlignment="Right" Name="cumulativeZTextBlock" Text="Z: 1.0" VerticalAlignment="Top"  Foreground="Blue" FontSize="28" FontWeight="Bold"/>
             </Grid>
-            <Grid Height="98"  x:Name="cumulativeGrid">
+            <Grid Height="51"  x:Name="cumulativeGrid">
                 <Line x:Name="cumulativeXLine" X1="240" Y1="100" X2="240" Y2="0" Stroke="Red" StrokeThickness="14"/>
                 <Line x:Name="cumulativeYLine" X1="240" Y1="100" X2="240" Y2="0" Stroke="Green" StrokeThickness="14"/>
                 <Line x:Name="cumulativeZLine" X1="240" Y1="100" X2="240" Y2="0" Stroke="Blue" StrokeThickness="14"/>
             </Grid>
             
         </StackPanel>
-        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.501,0.426" Margin="22,378,269,205"/>
-        <Button x:Name="btnRecord" Content="Record" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.501,0.426" Margin="231,378,60,205"/>
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.501,0.426" Margin="23,247,268,336"/>
+        <Button x:Name="btnRecord" Content="Record" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.501,0.426" Margin="273,247,18,336"/>
+        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.501,0.426" Margin="149,247,142,336"/>
     </Grid>
 </Page>

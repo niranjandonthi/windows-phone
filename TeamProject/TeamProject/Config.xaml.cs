@@ -41,10 +41,18 @@ namespace TeamProject
         /// This parameter is typically used to configure the page.</param>
        protected override void OnNavigatedTo(NavigationEventArgs e)
        {
-            userInfo.Text = e.Parameter.ToString();
-            base.OnNavigatedTo(e);
-     
-       }
+            
+           ///For the data extraction from the navigation.
+           var confignav = (NavigationContext)e.Parameter;
+           userInfo.Text = confignav.userID;
+        ///For the navigation history information storing of the pages.
+        string PageStack = "";
+           foreach (PageStackEntry page in Frame.BackStack)
+           {
+               PageStack += page.SourcePageType.ToString();
+           }
+           Frame.BackStack.RemoveAt(Frame.BackStackDepth - 1);
+      }
 
 
        private void btn_log_Click(object sender, RoutedEventArgs e)
@@ -85,7 +93,15 @@ namespace TeamProject
 
        private void btnContinue_Click(object sender, RoutedEventArgs e)
        {
-           this.Frame.Navigate(typeof(GyroAcceloData));
+           this.Frame.Navigate(typeof(SensorsData));
+       }
+
+       private void btnBack_Click(object sender, RoutedEventArgs e)
+       {
+           if (Frame.CanGoBack)
+           {
+               Frame.GoBack();
+           }
        }
 
         

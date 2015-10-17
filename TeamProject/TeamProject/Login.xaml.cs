@@ -43,18 +43,22 @@ namespace TeamProject
       
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
+            NavigationContext navcon = new NavigationContext()
+            {
+                userID = ((ComboBoxItem)cmb_user.SelectedItem).Content.ToString()
+            };
             ///Validation of the credentials.
-            string selectedUser=((ComboBoxItem)cmb_user.SelectedItem).Content.ToString();
+            
             if (pw_txtbx.Password.Equals(""))
             {
                msg_valid.Text = "Please enter the Password";
             }
-            else if (selectedUser == "User 1" || selectedUser == "User 2" || selectedUser == "User 3")
+            else if (navcon.userID == "User 1" || navcon.userID == "User 2" || navcon.userID == "User 3")
             {
                 if (pw_txtbx.Password.Equals("niranjan"))
                 {
-                   /// Frame.Navigate(typeof(Config), new PassedData { userdata= ((ComboBoxItem)cmb_user.SelectedItem).Content.ToString()});
-                    this.Frame.Navigate(typeof(Config),selectedUser);
+                   
+                    this.Frame.Navigate(typeof(Config),navcon);
                 }
 
                 else
@@ -64,7 +68,7 @@ namespace TeamProject
             }
 
             //Checking whether value is being taken or not.
-            txt_test.Text = selectedUser;
+            txt_test.Text = navcon.userID;
             
            
             

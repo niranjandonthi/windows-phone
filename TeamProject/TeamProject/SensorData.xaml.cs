@@ -20,9 +20,9 @@ namespace TeamProject
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SensorsData : Page
+    public sealed partial class SensorData : Page
     {
-        public SensorsData()
+        public SensorData()
         {
             this.InitializeComponent();
         }
@@ -32,42 +32,6 @@ namespace TeamProject
         /// </summary>
         /// <param name="e">Event data that describes how this page was reached.
         /// This parameter is typically used to configure the page.</param>
-        /// 
-        public enum Context
-        {
-            WhileStartingListener,
-            WhileReceivingData
-        }
-
-        public class ValuesReceivedEventArgs<T> : EventArgs
-        {
-            public T SensorReading { get; set; }
-        }
-
-        public class ExceptionOccurredEventArgs : EventArgs
-        {
-            public Exception Exception { get; set; }
-            public Context Context { get; set; }
-        }
-
-        /// <summary>
-        /// Interface for reading sensors
-        /// </summary>
-        public interface IsSensorReading
-        {
-            int NumSensorValues { get; }
-            void SetSensorValues(float[] values);
-        }
-        //Handles the exception and refer it to main function.
-
-        private void OnException(Exception ex, Context context)
-        {
-           //// if()
-            ///{
-
-           /// }
-        }
-
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }

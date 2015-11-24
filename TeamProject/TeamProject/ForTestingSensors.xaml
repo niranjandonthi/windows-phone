@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="TeamProject.ForTestingSensors"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TeamProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid>
+
+        <!--For Gyrosensors-->
+        <TextBlock x:Name="TopicGyro" FontSize="20" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Gyrosensors:" FontWeight="Bold" VerticalAlignment="Top"/>
+        <!--For Labels-->
+        <StackPanel HorizontalAlignment="Left" Height="85" Margin="10,38,0,0" VerticalAlignment="Top" Width="120">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="X (Pitch):" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Y (Roll):" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Z (Yaw)" VerticalAlignment="Top" FontSize="18"/>
+        </StackPanel>
+        <!--For Data Display-->
+        <StackPanel HorizontalAlignment="Left" Height="85" Margin="135,38,0,0" VerticalAlignment="Top" Width="115">
+            <TextBlock x:Name="DisGyro1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock x:Name="DisGyro2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock x:Name="DisGyro3" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="18"/>
+        </StackPanel>
+
+        <!--For Accelerometer-->
+        <TextBlock x:Name="TopicAccelo" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,146,0,0" TextWrapping="Wrap" Text="Accelerometer:" VerticalAlignment="Top"/>
+        <!--For Labels-->
+        <StackPanel HorizontalAlignment="Left" Height="79" Margin="10,164,0,0" VerticalAlignment="Top" Width="100">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="X:" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Y:" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Z:" VerticalAlignment="Top" FontSize="18"/>
+        </StackPanel>
+
+        <!--For Data Display-->
+        <StackPanel HorizontalAlignment="Left" Height="79" Margin="115,164,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.5,0.5">
+            <TextBlock x:Name="DisAccelo1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock x:Name="DisAccelo2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock x:Name="DisAccelo3" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="18"/>
+        </StackPanel>
+
+        <!--Buttons Stack-->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="47" Margin="10,583,0,0" VerticalAlignment="Top" Width="380">
+            <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Center" Background="Red"/>
+            <Button x:Name="btnRecord" Content="Record" HorizontalAlignment="Center" Background="Blue"/>
+            <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Center" Margin="0,-5,0,-5.333" Background="Green"/>
+        </StackPanel>
+
+
+    </Grid>
+</Page>

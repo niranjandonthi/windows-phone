@@ -93,7 +93,7 @@ namespace TeamProject
 
        private void btnContinue_Click(object sender, RoutedEventArgs e)
        {
-           this.Frame.Navigate(typeof(SensorsData));
+          /// this.Frame.Navigate(typeof(SensorsData));
        }
 
        private void btnBack_Click(object sender, RoutedEventArgs e)
